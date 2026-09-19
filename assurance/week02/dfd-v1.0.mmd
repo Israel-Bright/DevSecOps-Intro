@@ -1,0 +1,18 @@
+flowchart LR
+  subgraph Z0["User's browser"]
+    NCustomer["Customer"]
+    NBrowserInterface(("Browser Interface"))
+  end
+  subgraph Z1["Application server"]
+    NWebapplication(("Web application"))
+  end
+  subgraph Z2["Data store"]
+    NProductdatabase[("Product database")]
+  end
+  NCustomer -- "Search text and selected product" --> NBrowserInterface
+  NBrowserInterface -- "Product name, prices, and descriptions" --> NCustomer
+  NBrowserInterface -. "Product catalog request" .-> NWebapplication
+  NWebapplication -. "Product catalog data" .-> NBrowserInterface
+  NWebapplication -. "Product lookup criteria" .-> NProductdatabase
+  NProductdatabase -. "Matching product records" .-> NWebapplication
+  %% dotted arrows cross a trust boundary; solid arrows stay inside one zone
