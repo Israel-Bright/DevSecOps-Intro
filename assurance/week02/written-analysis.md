@@ -2,11 +2,11 @@
 
 CPS 5981 01, Week 02
 
-**Fork:** _not answered_
-**Commit:** _not answered_
-**Visibility:** _not answered_
+**Fork:** https://github.com/Israel-Bright/DevSecOps-Intro
+**Commit:** 0d63a16d1169d2670c96dba68995a90531d13e6c
+**Visibility:** Public
 **Collaborators:** none
-**Declared AI use:** none
+**Declared AI use:** AI assistance used for assignment organization, wording suggestions, interpreting tool output, and formatting guidance. The application observations, evidence collection, model decisions, threat judgments, and final submission choices are my own.
 
 ## 1. Which of your abuse cases are supported by evidence you gathered, and which rest on reasoning about the design?
 
