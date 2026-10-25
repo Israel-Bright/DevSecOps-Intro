@@ -1,0 +1,43 @@
+1792853333,kill,u07-juice-a-1
+1792853334,stop,u07-juice-a-1
+1792853334,die,u07-juice-a-1
+1792853394,start,u07-juice-a-1
+1792853878,kill,u07-idp-1
+1792853878,stop,u07-idp-1
+1792853878,die,u07-idp-1
+1792853938,start,u07-idp-1
+1792854371,exec_create: sh -c 
+for host in juice-a juice-b; do
+  if wget -q -T 5 -O /dev/null "http://$host:3000/api/Products"; then
+    echo "$host: OK"
+  else
+    echo "$host: FAILED"
+  fi
+done
+,u07-edge-1
+1792854371,exec_start: sh -c 
+for host in juice-a juice-b; do
+  if wget -q -T 5 -O /dev/null "http://$host:3000/api/Products"; then
+    echo "$host: OK"
+  else
+    echo "$host: FAILED"
+  fi
+done
+,u07-edge-1
+1792854371,exec_die,u07-edge-1
+1792854493,pause,u07-idp-1
+1792854554,unpause,u07-idp-1
+1792854902,exec_create: nginx -t,u07-edge-1
+1792854902,exec_start: nginx -t,u07-edge-1
+1792854902,exec_die,u07-edge-1
+1792854902,exec_create: nginx -s reload,u07-edge-1
+1792854902,exec_start: nginx -s reload,u07-edge-1
+1792854902,exec_die,u07-edge-1
+1792855074,exec_create: nginx -t,u07-edge-1
+1792855074,exec_start: nginx -t,u07-edge-1
+1792855074,exec_die,u07-edge-1
+1792855074,exec_create: nginx -s reload,u07-edge-1
+1792855074,exec_start: nginx -s reload,u07-edge-1
+1792855074,exec_die,u07-edge-1
+1792855176,pause,u07-idp-1
+1792855236,unpause,u07-idp-1
